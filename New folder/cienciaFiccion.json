@@ -1,0 +1,70 @@
+{
+    "titleHead": "Ciencia Ficcion",
+    "subTitle": "Generos, libros, peliculas y series",
+    "from": 1940,
+    "to": 2019,
+    "active": true,
+    "generos": [
+      {
+        "name": "Robots",
+        "urlImagen":"robot.png",
+        "autor": "Isaac Asimov",
+        "obra": "El sol desnudo",
+        "detalle": [
+          "Novela policial, continuación de Bovedas de Acero",
+          "Relaciones Humano - Robot"
+        ]
+      },
+      {
+        "name": "Cyberpunk",
+        "urlImagen":"cyberpunk.png",
+        "autor": "Willam Gibson",
+        "obra": "Neuromante",
+        "detalle": [
+          "Futuros distópicos con tecnologías avanzadas",
+          "Hackers, Inteligencia Artificial"
+        ]
+      },
+      {
+        "name": "Cassette Futurismo",
+        "urlImagen":"cassetfutu.png",
+        "autor": "Cary Fukunaga",
+        "obra": "Maniac",
+        "detalle": [
+          "También denominado Retro futurismo",
+          "Estética ecléctica, de los 60 y 70"
+        ]
+      },
+      {
+        "name": "RayPunk",
+        "urlImagen":"raypunk.png",
+        "autor": "Ray Bradbury",
+        "obra": "Cronicas Marcianas",
+        "detalle": [
+          "Estilo visual derivado de art deco",
+          "El viaje espacial como una aventura"
+        ]
+      },
+      {
+        "name": "Steampunk",
+        "urlImagen":"streampunk.png",
+        "autor": "H.G. Wells",
+        "obra": "La máquina del tiempo",
+        "detalle": [
+          "Estética victoriana y revolución industrial",
+          "Tecnología basada en el carbón y vapor"
+        ]
+      },
+      {
+        "name": "Atompunk",
+        "urlImagen":"atompunk.png",
+        "autor": "Alan Moore",
+        "obra": "Watchmen",
+        "detalle": [
+          "Estética de la Era Nuclear y espacial",
+          "Influencia en la arquitectura y el cine"
+        ]
+      }
+
+    ]
+  }

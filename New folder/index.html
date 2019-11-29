@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Ciencia Ficcion</title>
+     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Scada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+      <header>
+
+      </header>
+
+      <section>
+
+      </section>
+
+    <script>
+
+
+   var header = document.querySelector('header');
+   var section = document.querySelector('section');
+
+   var request = new XMLHttpRequest();
+   request.open('GET', 'cienciaFiccion.json');
+   request.responseType = 'text';
+   request.send();
+   request.onload = function(){
+           var cienciaficcionTexto = request.response;
+           var cienciaficcion = JSON.parse(cienciaficcionTexto);
+           populateHeader(cienciaficcion);
+           showGenero(cienciaficcion);
+
+   }
+
+function populateHeader(jsonObj) {
+  var myH1 = document.createElement('h1');
+  myH1.textContent = jsonObj['titleHead'];
+  header.appendChild(myH1);
+
+  var myPara = document.createElement('p');
+  myPara.textContent = jsonObj['subTitle'] + ' // Desde ' + jsonObj['from'];
+  header.appendChild(myPara);
+}
+function showGenero(jsonObj) {
+  var genero = jsonObj['generos'];
+
+  for (var i = 0; i < genero.length; i++) {
+    var myArticle = document.createElement('article');
+    var myH2 = document.createElement('h2');
+    var imagen = document.createElement('img');
+    var myPara1 = document.createElement('p');
+    var myPara2 = document.createElement('p');
+    var myPara3 = document.createElement('p');
+    var myList = document.createElement('ul');
+
+    myH2.textContent = genero[i].name;
+    imagen.src = genero[i].urlImagen;
+    myPara1.textContent = 'Obra: ' + genero[i].obra;
+    myPara2.textContent = 'Autor: ' + genero[i].autor;
+    myPara3.textContent = 'Caracteristicas :';
+
+    var caracteristicas = genero[i].detalle;
+    for (var j = 0; j < caracteristicas.length; j++) {
+      var listItem = document.createElement('li');
+      listItem.textContent = caracteristicas[j];
+      myList.appendChild(listItem);
+    }
+
+    myArticle.appendChild(myH2);
+    myArticle.appendChild(imagen);
+    myArticle.appendChild(myPara1);
+    myArticle.appendChild(myPara2);
+    myArticle.appendChild(myPara3);
+    myArticle.appendChild(myList);
+
+    section.appendChild(myArticle);
+  }
+}
+
+
+    </script>
+  </body>
+</html>
